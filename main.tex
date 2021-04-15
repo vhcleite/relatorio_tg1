@@ -53,17 +53,19 @@ Santo André\\Fevereiro de 2021
 \newpage
 \section{Introdução}
 
-Blockchain nasceu em 2008 com a introdução do Bitcoin e na última década ganhou repercussão e importância a ponto de ser plataforma de diversas aplicações utilizada por empresas e governos. Blockchain é o nome da tecnologia de blocos encadeados que são compartilhados por nós em uma rede \emph{peer-to-peer} (P2P). Cada bloco da blockchain possui um conjunto de informações que depois que o bloco é construído e inserido na blockchain, as informações não podem ser alteradas e estarão replicadas e acessíveis por todos os nós da rede P2P.
+Blockchain nasceu em 2008 com a introdução do Bitcoin~\cite{nakamoto2008peer} e na última década ganhou repercussão e importância a ponto de ser plataforma de diversas aplicações utilizada por empresas e governos. Blockchain é o nome da tecnologia de blocos encadeados que são compartilhados por nós em uma rede \emph{peer-to-peer} (P2P). Cada bloco da blockchain possui um conjunto de informações que depois que o bloco é construído e inserido na blockchain, as informações não podem ser alteradas e estarão replicadas e acessíveis por todos os nós da rede P2P~\cite{greve2018blockchain}.
 
-Uma das aplicações blockchain mais famosas e mais utilizadas atualmente são as criptomoedas ou moedas digitais. Foi a primeira tecnologia que permitiu a existência de um ativo digital pois evita a replicação do ativo e seu gasto duplo que até antes do surgimento da tecnologia era impossível de ser evitado. A blockchain tem um processo de validação chamado de mecanismo de consenso onde a maioria dos nós da rede P2P precisam chegar a um consenso olhando nos registros dentro dos blocos da blockchain que o valor que está sendo gasto não está sendo gasto mais de uma vez.
+Uma das aplicações blockchain mais famosas e mais utilizadas atualmente são as criptomoedas ou moedas digitais. Blockchain foi a primeira tecnologia que permitiu a existência de um ativo digital pois evita a replicação do ativo e seu gasto duplo que até antes do surgimento da tecnologia era impossível de ser evitado\cite{greve2018blockchain}. A blockchain tem um processo de validação chamado de mecanismo de consenso onde a maioria dos nós da rede P2P precisam chegar a um consenso olhando nos registros dentro dos blocos da blockchain que o valor que está sendo gasto não está sendo gasto mais de uma vez\cite{braga2017segurancca}.
 
-Moedas físicas, geralmente estão sob o controle de uma entidade governamental podendo ter o seu valor alterado com a impressão de dinheiro e também necessitam de entidades intermediárias que cobram taxas para realização de transações financeiras o que de certa forma diminui a liberdade da movimentação de dinheiro e impõe limites devido aos custo operacionais de se fazer movimentações financeiras. Moedas digitais tem como característica, trazida pela blockchain funcionar em cima de uma rede P2P e possuir o mecanismo de consenso, a sua descentralização. Transações financeiras com moedas digitais podem ser executadas sem entidades de confiança e que cobram taxas, como bancos e o banco central, pois o mecanismo de consenso irá validar e impedir ações maliciosas.
+Moedas físicas, geralmente estão sob o controle de uma entidade governamental podendo ter o seu valor alterado com a impressão de dinheiro e também necessitam de entidades intermediárias que cobram taxas para realização de transações financeiras o que de certa forma diminui a liberdade da movimentação de dinheiro e impõe limites devido aos custo operacionais de se fazer movimentações financeiras. Moedas digitais tem como característica, trazida pela blockchain funcionar em cima de uma rede P2P e possuir o mecanismo de consenso, a sua descentralização\cite{nakamoto2008peer}. Transações financeiras com moedas digitais podem ser executadas sem entidades de confiança e que cobram taxas, como bancos e o banco central, pois o mecanismo de consenso irá validar e impedir ações maliciosas\cite{nakamoto2008peer}.
 
-Apesar da existência de moedas digitais com valor financeiro, hoje em dia moedas digitais não são amplamente utilizadas como meio de pagamento. Uma transação financeira utilizando moeda digital é demorada pois precisa esperar o mecanismo de consenso agir numa escala global, não está livre de custo pois a inserção de uma transação na blockchain precisa remunerar os mineradores e não é escalável uma vez que as blockchains mais usadas e conhecidas conseguem processar cerca de 30 transações por segundo, o que é muito menor do que a média de processamento da Visa de 1700 transações por segundo. Como uma solução para essas questões inerentes a tecnologia de blockchain foi criada uma segunda camada em cima da blockchain, o que faz a solução final ter os mesmos benefícios que a blockchain tem, chamada de Payment Channel Network (PCN). O PCN faz não ser mais necessário que toda transação financeira precise entrar na blockchain imediatamente fazendo com que um pagamento seja quase instantâneo, escalável e sem custo. O único custo envolvido é o de abrir e fechar um canal de pagamento com um remetente que precisa ser feito por meio de processo transacional na blockchain.
+Apesar da existência de moedas digitais com valor financeiro, hoje em dia, moedas digitais não são amplamente utilizadas como meio de pagamento. Uma transação financeira utilizando moeda digital é demorada pois precisa esperar o mecanismo de consenso agir numa escala global, não está livre de custo pois a inserção de uma transação na blockchain precisa remunerar os mineradores e não é escalável uma vez que as blockchains tradicionais, como por exemplo a Ethereum, que consegue processar no máximo 15 transações por segundo, o que é muito menor do que a média de processamento da Visa de 1700 transações por segundo\cite{mercan2021cryptocurrency, visa2019speed, ethereum2021oficial}. Como uma solução para essas questões inerentes a tecnologia de blockchain foi criada uma segunda camada em cima da blockchain, o que faz a solução final ter os mesmos benefícios que a blockchain tem, chamada de Payment Channel Network (PCN)\cite{mercan2021cryptocurrency}. O PCN faz não ser mais necessário que toda transação financeira precise entrar na blockchain imediatamente fazendo com que um pagamento seja quase instantâneo, escalável e sem custo. O único custo envolvido é o de abrir e fechar um canal de pagamento com um remetente que precisa ser feito por meio de processo transacional na blockchain\cite{raidenmedium}.
 
 Tendo uma tecnologia que permita pagamentos rápidos e sem custo independente do valor, torna viável um conceito não novo que é o conceito de micropagamentos. Um micropagamento é definido como um pagamento de baixo valor financeiro. Micropagamentos até então tinham o problema que o valor do pagamento era muitas vezes muito próximo ou menor do que o valor das taxas envolvidas cobradas por entidades bancárias como um custo operacional. A viabilidade de micropagamentos torna possível uma nova modalidade de consumir produtos e serviços que até então não podiam ser consumidos sob demanda.
 
 Este relatório aborda os temas estudados como blockchain, criptomoedas e PCN que possibilitarão a construção de uma aplicação cujo consumo de conteúdo possa ser feito sob demanda através do pagamento de valores pequenos, impraticáveis com modelos de pagamentos existentes no mercado hoje.
+
+O trabalho de graduação tem como objetivo desenvolver uma plataforma de streaming de músicas e/ou vídeos que aceite pagamentos por meio da blockchain Ethereum utilizando o mecanismo Off-Chain PCN como facilitador. O conteúdo consumido deverá ser liberado sob demanda mediante micropagamentos que desbloquearão blocos do conteúdo.
 
 \section{Fundamentação Teórica}
 
@@ -79,13 +81,20 @@ A estrutura de dados do blockchain, como o nome sugestivamente diz, é uma lista
 
 Cada bloco da blockchain é constituído por um cabeçalho e por um conjunto de transações. Um cabeçalho simplificado de um bloco possui informações como: o \emph{hash} do bloco anterior, um número pseudoaleatório \emph{nonce}, o hash do bloco inteiro e o \emph{hash} da raiz da árvore de Merkle que é a estrutura de dados na qual o conjunto de transações está organizado.
 
-Como já dito, o conjunto de transações é organizado em um árvore de Merkle onde as folhas da árvore são as transações propriamente ditas. O segundo nível da árvore é composto pelo hash de cada uma das transações e os demais níveis são os hash de pares de hash dos níveis anteriores até que se chegue na raiz da árvores, cujo hash é armazenado no cabeçalho do bloco. A figura \ref{fig:estrutura_blockchain} mostra uma representação de um bloco da blockchain.
+Como já dito, o conjunto de transações é organizado em um árvore de Merkle onde as folhas da árvore são as transações propriamente ditas. O segundo nível da árvore é composto pelo hash de cada uma das transações e os demais níveis são os hash de pares de hash dos níveis anteriores até que se chegue na raiz da árvores, cujo hash é armazenado no cabeçalho do bloco. A figura \ref{fig:estrutura_blockchain} mostra uma representação de um bloco da blockchain e a figura \ref{fig:cadeia_blockchain} representa um cadeia de blocos interligados pelo hash do bloco anterior.
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{Imagens/estrutura_blockchain.png}
-    \caption{Estrutura de um bloco da blockchain.}
+    \caption{Estrutura de um bloco da blockchain. Fonte: \cite{braga2017segurancca}}
     \label{fig:estrutura_blockchain}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{Imagens/cadeia_blockchain.png}
+    \caption{Representação da cadeia de blocos da blockchain. Fonte: \cite{braga2017segurancca}}
+    \label{fig:cadeia_blockchain}
 \end{figure}
 
 Uma função \emph{hash} possui a propriedade de \textbf{resistência à colisão} em que idealmente é impossível encontrar dois \emph{hashs} iguais de tal forma que $H(a) = H(b)$ onde $a$ e $b$ são mensagens diferentes e propriedade de \textbf{ocultação} em que dado $H(a)$ é inviável encontrar $a$. O uso de funções hash na árvore de Merkle das folhas até a sua raiz faz com que possamos conferir a integridade das transações presentes no bloco, isto é, conferir de não houve alteração na transação depois de inserida no bloco. Para isso basta ir calculando o hash das folhas até o hash da raiz e comparar com o hash presente no cabeçalho do bloco. Para certificar que as transações estão íntegras basta que o hash resultante da raiz seja igual ao hash presente no cabeçalho.
@@ -135,9 +144,9 @@ Ao final da construção e validação de um novo bloco, os algorítimos de cons
 
 Para atingir uma consistência na blockchain, a inserção de blocos não pode ser feita por todo e qualquer nó pois se fosse dificilmente chegaria o momento em que todos os nós da rede teriam a mesma visão do estado da blockchain. Portanto, deve existir um mecanismo de inserção de blocos que aumente a convergência do estado do sistema. A seguir estão alguns dos principais:
 \begin{itemize}
-    \item Prove of Work(PoW): Neste processo de inserção todos os nós da rede podem competir para validar transações e inserir novos blocos. Os nós que querem fazer o processo de validação e inserção são chamadas de mineradores e devem realizar uma tarefa primeiro para que ganhem o direito de validar e inserir. A tarefa no processo de PoW é o de "encontrar uma entrada cujo valor de hash seja menor que um determinado alvo"~\cite{miers2019analise}. Fazer a mineração é um processo altamente custoso computacionalmente e portanto uma desvantagem deste método é o tempo que leva para ser completada a mineração e o custo energético associado. Atualmente é o método utilizado pelo Bitcoin e Ethereum
+    \item Proof of Work(PoW): Neste processo de inserção todos os nós da rede podem competir para validar transações e inserir novos blocos. Os nós que querem fazer o processo de validação e inserção são chamadas de mineradores e devem realizar uma tarefa primeiro para que ganhem o direito de validar e inserir. A tarefa no processo de PoW é o de "encontrar uma entrada cujo valor de hash seja menor que um determinado alvo"~\cite{miers2019analise}. Fazer a mineração é um processo altamente custoso computacionalmente e portanto uma desvantagem deste método é o tempo que leva para ser completada a mineração e o custo energético associado. Atualmente é o método utilizado pelo Bitcoin e Ethereum
     
-    \item Prove of Stake(PoS): No PoS apenas nós que possam oferecer garantias, em termos de tokens, podem participar. Nesse processo, validadores são escolhidos aleatoriamente para criar blocos e para validar blocos que eles não criaram. A garantia é para que o nó sofra penalidades com perdas financeiras caso haja alguma anomalia na criação ou validação de blocos ou seja percebido algum comportamento malicioso por parte do nó. Deste modo espera-se que as consequências de um mau comportamento sejam mais caros do que agir corretamente. A blockchain de Ethereum está lançando um nova versão que migrará do atual uso de PoW para PoS. Por não ter a mineração feita no PoW espera-se ganhar em termos de economia energética e tempo com a atualização.   
+    \item Proof of Stake(PoS): No PoS apenas nós que possam oferecer garantias, em termos de tokens, podem participar. Nesse processo, validadores são escolhidos aleatoriamente para criar blocos e para validar blocos que eles não criaram. A garantia é para que o nó sofra penalidades com perdas financeiras caso haja alguma anomalia na criação ou validação de blocos ou seja percebido algum comportamento malicioso por parte do nó. Deste modo espera-se que as consequências de um mau comportamento sejam mais caros do que agir corretamente. A blockchain de Ethereum está lançando um nova versão que migrará do atual uso de PoW para PoS. Por não ter a mineração feita no PoW espera-se ganhar em termos de economia energética e tempo com a atualização.   
 \end{itemize}
 
 \subsection{Modelos Blockchain}
@@ -164,13 +173,13 @@ Os passos descritos acima podem ser visualizados na figura \ref{fig:transacao_bl
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{Imagens/passos_transação.png}
-    \caption{Fluxo de transação na blockchain.}
+    \caption{Fluxo de transação na blockchain. Fonte: \cite{braga2017segurancca}}
     \label{fig:transacao_blockchain}
 \end{figure}
 
 \subsection{Contratos Inteligentes}
 
-Como já dito, as transações de uma blockchain são texto livre e seu conteúdo depende da semântica da aplicação. A partir dessa liberdade no uso de blockchain foi criado o conceito de contratos inteligentes. Contratos inteligentes são "programas de computador seguros e imparáveis que representam acordos executáveis e exigíveis automaticamente"~\cite{braga2017segurancca}. Estes programas são implantados como transações na blockchain. Eles rodam nos nós da rede de blockchain e funcionam automaticamente em benefício dos participantes da rede. 
+Como já dito, as transações de uma blockchain são texto livre e seu conteúdo depende da semântica da aplicação. A partir dessa liberdade no uso de blockchain foi criado o conceito de contratos inteligentes. Contratos inteligentes são "programas de computador seguros e imparáveis que representam acordos executáveis e exigíveis automaticamente"~\cite{braga2017segurancca}. Estes programas são implantados como transações na blockchain. Eles rodam nos nós da rede de blockchain e "funcionam automaticamente em benefício dos participantes da rede"\cite{braga2017segurancca}. 
 
 Quando implantado o binário do contrato para a blockchain ele não pode mais ser impedido de rodar uma vez que a condições programadas sejam atingidas e portanto o que foi programado é o que será executado em todos os nós da rede P2P. Essa característica de inviolabilidade de código é interessante para execução de acordos em que não existem necessariamente confiança entre duas ou mais parte envolvidas. Com o uso de contratos inteligente, uma vez feito um acordo e implantado na blockchain ele será executado nas condições previstas sem qualquer entidade confiável controlando o processo.
 
@@ -194,7 +203,7 @@ A figura \ref{fig:aplicacao_blockchain} mostra os componentes descritos acima na
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{Imagens/estrutura_dapp.png}
-    \caption{Estrutura de uma aplicação blockchain.}
+    \caption{Estrutura de uma aplicação blockchain. Fonte: \cite{braga2017segurancca}}
     \label{fig:aplicacao_blockchain}
 \end{figure}
 
@@ -213,9 +222,9 @@ Micropagamentos são transações financeiras cujo valor financeiro é muito peq
 
 Apesar de moedas digitais em cima de blockchain não terem entidades intermediadoras entre transferências, pagamento com moedas digitais ainda possuem certas limitações \cite{mercan2021cryptocurrency}.
 \begin{enumerate}
-    \item Escalabilidade - A blockchain do bitcoin consegue lidar com certa de 7 transações por segundo e a blockchain Ethereum com Ether consegue lidar com cerca de 30 transações por segundo. Números bem abaixo do que a Visa consegue fazer hoje de cerca 1700 transações por segundo.
+    \item Escalabilidade - A blockchain do bitcoin consegue lidar com cerca de 7 transações por segundo e a blockchain Ethereum com Ether consegue lidar com cerca de 15 transações por segundo. Números bem abaixo do que a Visa consegue fazer hoje uma média de 1700 transações por segundo~\cite{mercan2021cryptocurrency, visa2019speed, ethereum2021oficial}.
     \item Taxa de transações - apesar de não ter entidades intermediadores como bancos, a submissão de uma transação para a Ethereum, por exemplo, tem um custo associado impactando no custo final do micropagamento. 
-    \item Tempo de confirmação - como já discutido, a submissão de uma transação para inserção na blockchain tem o delay do processo consenso e distribuição do novo bloco pela rede atrelado. Este tempo de espera faz com que um pagamento seja um processo demorado quando deveria ser quase instantâneo. 
+    \item Tempo de confirmação - como já discutido, a submissão de uma transação para inserção na blockchain tem o delay do processo consenso e distribuição do novo bloco pela rede atrelado. Este tempo de espera faz com que um pagamento seja um processo demorado quando, idealmente, deveria ser quase instantâneo. 
 \end{enumerate}
 
 Apesar de blockchains terem permitido a existência de um ativo digital com valor financeiro mesmo sem uma entidade confiável como um banco central e bancos intermediários, as limitações acima dificultam o uso de moedas digitais como soluções de pagamentos. 
@@ -234,36 +243,61 @@ Apesar do processo de abertura de canal entre um remetente $A$ e um destinatári
      
 \subsection{Ethereum}
 
-A Ethereum é uma blockchain de propósito geral que oferece a possibilidade de rodar contratos inteligentes através de uma camada de abstração Ethereum Virtual Machine (EVM) que conecta o client da máquina local com o restante da rede usando uma criptomoeda própria denominada \textit{Ether}. A Ethereum é uma blockchain pública e portanto qualquer pessoa pode criar e ler transações e participar do processo de consenso PoW na versão antiga e PoS na versão nova. Por ser pública também tem uma composição da rede desconhecida com a entrada e saída aleatória de nós. 
+A Ethereum é uma blockchain de propósito geral que oferece a possibilidade de rodar contratos inteligentes através de uma camada de abstração Ethereum Virtual Machine (EVM) que conecta o client da máquina local com o restante da rede usando uma criptomoeda própria denominada \textit{Ether}\cite{ethereum2021oficial}. A Ethereum é uma blockchain pública e portanto qualquer pessoa pode criar e ler transações e participar do processo de consenso PoW na versão antiga e PoS na versão nova. Por ser pública também tem uma composição da rede desconhecida com a entrada e saída aleatória de nós. 
 
 O contrato da Ethereum possui uma linguagem própria de escrita que é o Solidity. Cada operação realizada por um contrato está associado a um custo de execução de \emph{gas} que é o "combustível" consumido na operação\cite{miers2019analise}. 
-O Ethereum possui sua própria forma para financiar a validação de blocos e monetizar a mesma, o seu "combustível", como é definido pela plataforma, é conhecido como Ether. O Gas é uma forma de desacoplar o custo das transações no Ethereum do câmbio flutuante da criptomoeda Ether, estabelecendo um custo para cada trabalho computacional.
 
-O aspecto de propósito geral da linguagem solidity empregada nos contratos inteligentes faz com que da Ethereum possam nascer aplicações diversas, não necessariamente financeiras, que utilizem a infraestrutura da blockchain já existente sem a necessidade de criar uma blockchain nova. Ethereum é uma das plataformas mais utilizadas em projetos pilotos atualmente e também uma das tecnologias blockchain mais estudadas. Existem ambientes de desenvolvimento (IDEs), como o Browser Solidity e o Ethereum Studio.
+O aspecto de propósito geral da linguagem solidity empregada nos contratos inteligentes faz com que da Ethereum possam nascer aplicações diversas, não necessariamente financeiras, que utilizem a infraestrutura da blockchain já existente sem a necessidade de criar uma blockchain nova. Ethereum é uma das plataformas mais utilizadas em projetos pilotos atualmente e também uma das tecnologias blockchain mais estudadas com diversas ferramentas de suporte ao desenvolvimento disponíveis. Existem ambientes de desenvolvimento (IDEs), como o Browser Solidity e o Ethereum Studio. Além disso a blockchain Ethereum possui redes de teste que permitem que o desenvolvimento e teste de aplicações em cima dela possam ser feitos sem qualquer custo financeiro.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.1]{Imagens/ethereum.png}
-    \caption{Símbolo Ethereum.}
-    \label{fig:ethereum_simbol}
-\end{figure}
+\subsubsection{Gas}
+
+A blockchain Ethereum possui sua própria forma para financiar a validação de blocos e monetizar a mesma. NA blockchain existe uma unidade de medida de esforço computacional chamada \empth{gas}. O \empth{gas} busca quantificar o esforço computacional (ciclos de CPU, acesso a disco e acesso de memória) que um nó da Ethereum precisa fazer para processar um contrato inteligente na EVM~\cite{eric2019gas}. Naturalmente, aplicações diferente possuem contratos diferentes que por sua vez tem complexidades diferentes com um \empth{gas} associado. Uma vez sabido o \empth{gas} de uma transação, o nó que está enviando a transação para ser inserida na blockchain define um preço de Ether pelo qual deseja pagar por cada \empth{gas}. Deste modo, a transação terá um custo total para o requisitante de \empth{gas} da transação multiplicado por preço do \empth{gas}. O custo de gas será enviado para o nó que executar a transação e inserir ela na blockchain como uma forma de recompensa pelo trabalho executado.
+
+Uma vez que cada nó possui um numero finito de poder computacional, eles precisam decidir quais transações executar na EVM. A decisão mais coerente é de pegar as transações que irão devolver uma remuneração maior devido ao seu custo mais alto. Desse modo, uma estratégia para que nós tenham as suas transações processadas com prioridade é aumentar o preço do \empth{gas} da transação submetida à rede Ethereum. Essa definição de preço de \empth{gas} definida considerando o quão prioritária deverá ser o processamento da transação vai oscilar de acordo com a oferta de recurso computacional e a demanda de novas transações para serem processadas configurando um "mercado de processamento de transações". Os que querem ter suas transações processadas mais rápido devem pagar mais no preço do \empth{gas}~\cite{eric2019gas}.
+
+\subsubsection{Tokens}
+
+O \emph{Ether} é a moeda nativa do Ethereum que possui valor monetário. Os contratos inteligente processados na EVM permitem que desenvolvedores de dApps consigam criar suas próprias tokens, que funcionam como uma moeda para determinadas aplicações. Assim, usuários conseguem comprar token de dApps gastando seus \emph{ether}, bem como vendê-los~\cite{veronica2019token}. Os tokens podem ser usados pelos dApps como moeda de troca por serviços dos produtos ou também como uma espécie de mensuração de direitos que uma pessoa tem para fazer determinada atividade em um dApp~\cite{arum2019token} ou virtualização de qualquer objeto do mundo físico~\cite{ethereum2021oficial}.
+
+Devido a possibilidade de existir diversos tokens na Ethereum é de interesse que seja criado um padrão para todos os token. A padronização do tokens traz vantagens como a garantia que um token criado seguindo o padrão terá determinadas funções que são úteis e importantes mas que num primeiro momento poderiam passar despercebidas. O padrão mais utilizado de token é o ERC-20~\cite{ethereum2021oficial}. O padrão ERC-20 foi proposto por Fabian Vogelsteller em 2015. Tokens seguindo esse padrão devem implementar alguns métodos em seus contratos que estão definidos na interface do ERC-20. Dentre as funções há métodos que de transferência de tokens entre contas e também método para verificar o balanço de um usuário~\cite{ethereum2021oficial}.
 
 \subsection{Raiden}
      
- Raiden Network é uma solução Off-chain que implementa em cima do blockchain Ethereum o conceito de PCN. A implementação de uma PCN é complexa e não trivial o que dificulta o processo de desenvolvimento de aplicações de pagamento com moedas digitais. Apesar disso, toda a complexidade de implementação do PCN é abstraída através de uma API de fácil uso o que permite um desenvolvimento de soluções descentralizadas e escaláveis de maneira mais fácil. Raiden Network é compatível com o pagamento de qualquer token ERC20~\cite{raidenmedium}.
+ Raiden Network é uma solução Off-chain que implementa em cima do blockchain Ethereum o conceito de PCN. A implementação de uma PCN é complexa e não trivial o que dificulta o processo de desenvolvimento de aplicações de pagamento com moedas digitais. Apesar disso, toda a complexidade de implementação do PCN é abstraída através de uma API do Raiden de fácil uso o que permite um desenvolvimento de soluções descentralizadas e escaláveis de maneira mais fácil. Raiden Network é compatível com o pagamento de qualquer token ERC20~\cite{raidenmedium}.
      
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.4]{Imagens/raiden.png}
-    \caption{Símbolo Raiden.}
-    \label{fig:raiden_simbol}
-\end{figure}
 
 \subsection{Aplicação}
 
-Neste trabalho de graduação será feito o uso dos conceitos estudados utilizando a blockchain Ethereum e o framework Raiden para a construção de uma aplicação que permita fazer o uso de micropagamentos para consumo de determinado produto. Diversas provas de conceito utilizando blockchain nascem usando Ethereum pois é uma plataforma de propósito geral com ampla documentação na internet, cursos e casos de uso e por isso ela foi escolhida para este trabalho. Como o foco do TG é o uso de blockchain para micropagamentos a solução final precisará usar o Raiden que funciona em cima da Ethereum para sobrepor as limitações de escalabilidade, custo e tempo de espera de processamento. 
+Neste trabalho de graduação será feito o uso dos conceitos estudados utilizando a blockchain Ethereum e o framework Raiden para a construção de uma aplicação que permita fazer o uso de micropagamentos para consumo de determinado produto. Diversas provas de conceito utilizando blockchain nascem usando Ethereum pois é uma plataforma de propósito geral com ampla documentação na internet, cursos e casos de uso e por isso ela foi escolhida para este trabalho. Como o foco do trabalho de graduação é o uso de blockchain para micropagamentos a solução final precisará usar o Raiden que funciona em cima da Ethereum para sobrepor as limitações de escalabilidade, custo e tempo de espera de processamento. 
 
-A aplicação construída deverá liberar o consumo de conteúdo como artigos jornalísticos, vídeos, músicas ou consumo de serviços de streaming por demanda sendo que a sua disponibilização do conteúdo ocorrerá mediante um pagamento de pequeno valor, configurando um micropagamento.
+A aplicação construída deverá liberar o consumo de conteúdo como artigos jornalísticos, vídeos, músicas ou consumo de serviços de streaming por demanda sendo que a disponibilização do conteúdo ocorrerá mediante um pagamento de pequeno valor, configurando um micropagamento.
+
+O trabalho será estruturado utilizando 5 componentes principais. Um front-end web pelo qual o cliente irá interagir com a plataforma e pelo qual haverá o consumo do conteúdo. Uma API de clientes que terá como domínio os dados do cliente e contas da Ethereum. Uma API de créditos pelo qual o cliente irá abrir um canal com a plataforma e depositar créditos para posteriormente gastar com o consumo de conteúdo da plataforma. Uma API de pagamentos que será usada para registrar um pagamento para a plataforma e realizar a liberação de um conteúdo para um determinado cliente. E por fim, uma API de conteúdos que irá catalogar todos os conteúdos disponíveis para o cliente e por onde será feito o download do conteúdo pelo front-end. A figura \ref{fig:diagrama_componentes} mostra um diagrama com todas as peças conectadas.
+
+As APIs serão feitas em Java com o apoio do Spring framework e o front-end com o uso do Angular framework devido experiência prévia com tais ferramentas a maior proficiência. 
+
+Neste trabalho, apesar de funcionar em cima da blockchain Ethereum, não será necessário subir um nó Ethereum localmente, apenas um nós do Raiden, pois o Raiden possui integração com o Infrura que é um serviço conectado com um nó próprio do Ethereum e que permite interação com a blockchain a partir de sua API~\cite{infura2021oficial}.  
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{Imagens/Diagrama sem título.png}
+    \caption{Diagrama de componentes.}
+    \label{fig:diagrama_componentes}
+\end{figure}
+
+
+
+\subsection{Cronograma de atividades}
+
+As atividades serão executadas durante a disciplina TG II que terá um quadrimestre com 12 semanas de duração. Na figura \ref{fig:cronograma} segue um diagrama de Gantt de como será a evolução do projeto durante o quadrimestre.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Imagens/cronograma.png}
+    \caption{Cronograma de atividades.}
+    \label{fig:cronograma}
+\end{figure}
+
 
 \singlespacing
 \newpage
